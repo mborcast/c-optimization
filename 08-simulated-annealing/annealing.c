@@ -3,8 +3,6 @@
 #include <time.h>
 #include <math.h>
 
-#define PI 3.141592653589793
-
 typedef struct {
    void* data;
    int size;
@@ -31,7 +29,7 @@ double z(Papu* x) {
 
     for (unsigned int i = 0; i < x->size; i++) {
         x_i = ((double*)(x->data))[i];
-        result += pow(x_i, 2) - 10 * cos(2 * PI * x_i); 
+        result += pow(x_i, 2) - 10 * cos(2 * M_PI * x_i); 
     }
     return result;
 }
